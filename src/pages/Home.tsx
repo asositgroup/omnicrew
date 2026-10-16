@@ -107,9 +107,9 @@ export function Home() {
         </div>
         <a
           href="#register"
-          className="relative z-10 mx-auto mt-3 flex h-14 w-full max-w-[420px] items-center lg:col-start-1 lg:row-start-4 lg:mx-0 lg:mt-8 lg:w-fit lg:px-10 justify-center rounded-full bg-cobalt px-7 text-base font-semibold text-white btn-3d"
+          className="relative z-10 mx-auto mt-3 flex h-14 w-full max-w-[420px] items-center lg:col-start-1 lg:row-start-4 lg:mx-0 lg:mt-8 lg:w-fit lg:px-10 justify-center rounded-full bg-cobalt px-7 text-[1.35rem] font-semibold text-white btn-3d md:text-2xl"
         >
-          Ro‘yxatdan o‘tish
+          Bepul auditga yozilish
         </a>
       </section>
 
@@ -138,7 +138,7 @@ export function Home() {
                 href="#register"
                 className="btn-3d flex h-12 w-full items-center justify-center rounded-full bg-cobalt px-6 text-[15px] font-medium text-white"
               >
-                Ro‘yxatdan o‘tish
+                Agentlarni ishga tushirish
               </a>
             </div>
           </div>
