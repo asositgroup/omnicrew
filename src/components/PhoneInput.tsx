@@ -9,7 +9,6 @@ function formatFor(code: string) {
   const { groups } = format;
   return {
     placeholder: format.placeholder,
-    maxLength: groups.reduce((sum, g) => sum + g, 0) + groups.length - 1,
     pattern: new RegExp("^" + groups.map((g) => `\\d{${g}}`).join("\\s") + "$"),
     format(digits: string) {
       const parts: string[] = [];
@@ -72,7 +71,7 @@ export function PhoneInput({ name }: { name: string }) {
   }
 
   return (
-    <div ref={rootRef} className="relative">
+    <div ref={rootRef} className="relative min-w-0">
       <div className="flex h-12 items-stretch overflow-hidden rounded-xl border border-line bg-white ring-cobalt/30 focus-within:ring-4">
         <button
           type="button"
@@ -92,10 +91,9 @@ export function PhoneInput({ name }: { name: string }) {
           inputMode="tel"
           autoComplete="tel-national"
           value={value}
-          maxLength={fmt.maxLength}
           placeholder={fmt.placeholder}
           onChange={(e) => onInput(e.target.value)}
-          className="min-w-0 flex-1 bg-transparent px-3 text-[18px] outline-none"
+          className="w-0 min-w-0 flex-1 bg-transparent px-3 text-[18px] outline-none"
         />
       </div>
       <input type="hidden" name={name} value={complete ? `${country.code} ${value}` : ""} />

@@ -10,6 +10,7 @@ import {
 import { Reveal } from "../components/Reveal";
 import { AgentCarousel } from "../components/AgentCarousel";
 import { Logo } from "../components/Logo";
+import { PhoneInput } from "../components/PhoneInput";
 import { apps, chats, faqs, scenarios } from "../data";
 
 
@@ -71,7 +72,11 @@ export function Home() {
 
     if (!name || !contact) {
       setFormStatus("error");
-      setFormMessage("Iltimos, ismingiz va telefon raqamingizni kiriting.");
+      setFormMessage(
+        name && data.get("contactPartial")
+          ? "Telefon raqamni to‘liq kiriting."
+          : "Iltimos, ismingiz va telefon raqamingizni kiriting.",
+      );
       return;
     }
 
@@ -475,17 +480,10 @@ export function Home() {
                 className="h-12 rounded-xl border border-line bg-white px-3.5 text-[18px] outline-none ring-cobalt/30 focus:ring-4"
               />
             </label>
-            <label className="grid gap-2 text-sm font-medium text-ink">
+            <div className="grid gap-2 text-sm font-medium text-ink">
               Telefon raqam
-              <input
-                name="contact"
-                type="tel"
-                inputMode="tel"
-                autoComplete="tel"
-                placeholder="+998 90 123 45 67"
-                className="h-12 rounded-xl border border-line bg-white px-3.5 text-[18px] outline-none ring-cobalt/30 focus:ring-4"
-              />
-            </label>
+              <PhoneInput name="contact" />
+            </div>
             <label className="grid gap-2 text-sm font-medium text-ink">
               Biznes yoki kompaniya nomi
               <input
