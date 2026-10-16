@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { ArrowCounterClockwise } from "@phosphor-icons/react";
 import type { Agent } from "../data";
 
@@ -21,7 +20,7 @@ export function FlipCard({ agent }: { agent: Agent }) {
 
   return (
     <article
-      className={`flip-scene h-[430px] w-[min(300px,82vw)] shrink-0 cursor-pointer snap-start md:h-[520px] md:w-[440px] ${
+      className={`flip-scene h-[460px] w-full cursor-pointer md:h-[520px] ${
         flipped ? "is-flipped" : ""
       }`}
     >
@@ -41,21 +40,21 @@ export function FlipCard({ agent }: { agent: Agent }) {
           aria-label={`${agent.name} kartasini o‘girish`}
         >
           <FlipButton />
-          <div className="relative z-10 flex h-[42%] flex-col px-5 pb-2 pt-6 md:px-7 md:pt-8">
-            <p className="pr-16 text-[14px] leading-snug text-ink/55 md:pr-20 md:text-[16px]">
+          <div className="relative z-10 flex shrink-0 flex-col px-5 pb-2 pt-6 md:px-7 md:pt-8">
+            <p className="pr-16 text-[13px] leading-snug text-ink/55 md:pr-20 md:text-[16px]">
               {agent.blurb}
             </p>
-            <h3 className="mt-2 text-[2.15rem] font-semibold leading-[0.88] tracking-tight text-ink md:mt-3 md:text-[3.6rem]">
+            <h3 className="mt-2 text-[2.15rem] font-semibold leading-[0.92] tracking-tight text-ink md:mt-3 md:text-[3.6rem]">
               {agent.name}
             </h3>
           </div>
           <div className="relative min-h-0 flex-1">
             <img
               src={`${agent.image}?v=12`}
-              alt={`${agent.name} OmniCrew agenti`}
+              alt={`${agent.name} AsosAI agenti`}
               className={`absolute inset-x-0 bottom-0 ${
                 agent.image.endsWith(".png")
-                  ? "left-1/2 h-[115%] w-auto max-w-[88%] -translate-x-1/2 object-contain object-bottom"
+                  ? "left-1/2 h-[102%] w-auto max-w-[88%] -translate-x-1/2 object-contain object-bottom md:h-[115%]"
                   : "h-full w-full object-cover object-[center_35%]"
               }`}
             />
@@ -75,7 +74,7 @@ export function FlipCard({ agent }: { agent: Agent }) {
           </div>
         </div>
         <div
-          className="flip-face flip-back absolute inset-0 flex flex-col rounded-[28px] px-7 pb-6 pt-8 text-ink"
+          className="flip-face flip-back absolute inset-0 flex flex-col overflow-hidden rounded-[28px] px-5 pb-5 pt-6 text-ink md:px-7 md:pb-6 md:pt-8"
           style={{ background: agent.tone }}
           onClick={flip}
           onKeyDown={(event) => {
@@ -89,36 +88,36 @@ export function FlipCard({ agent }: { agent: Agent }) {
           aria-label={`${agent.name} kartasini qaytarish`}
         >
           <FlipButton />
-          <h3 className="pr-16 text-[1.8rem] font-semibold leading-[0.95] tracking-tight md:pr-24 md:text-[2.35rem]">
+          <h3 className="pr-16 text-[1.6rem] font-semibold leading-[0.95] tracking-tight md:pr-24 md:text-[2.35rem]">
             {agent.name}
           </h3>
-          <dl className="mt-7 grid flex-1 gap-6 text-[16px] leading-relaxed text-ink/80">
+          <dl className="mt-4 grid flex-1 content-start gap-3 text-[13.5px] leading-snug text-ink/80 md:mt-7 md:gap-6 md:text-[16px] md:leading-relaxed">
             <div>
-              <dt className="text-[11px] font-medium uppercase tracking-[0.14em] text-ink/40">
+              <dt className="text-[10px] font-medium uppercase tracking-[0.14em] text-ink/40 md:text-[11px]">
                 Nima qiladi
               </dt>
-              <dd className="mt-1.5">{agent.does}</dd>
+              <dd className="mt-1 md:mt-1.5">{agent.does}</dd>
             </div>
             <div>
-              <dt className="text-[11px] font-medium uppercase tracking-[0.14em] text-ink/40">
+              <dt className="text-[10px] font-medium uppercase tracking-[0.14em] text-ink/40 md:text-[11px]">
                 Qanday ishlatasiz
               </dt>
-              <dd className="mt-1.5">{agent.used}</dd>
+              <dd className="mt-1 md:mt-1.5">{agent.used}</dd>
             </div>
             <div>
-              <dt className="text-[11px] font-medium uppercase tracking-[0.14em] text-ink/40">
+              <dt className="text-[10px] font-medium uppercase tracking-[0.14em] text-ink/40 md:text-[11px]">
                 Nima olasiz
               </dt>
-              <dd className="mt-1.5">{agent.gets}</dd>
+              <dd className="mt-1 md:mt-1.5">{agent.gets}</dd>
             </div>
           </dl>
-          <Link
-            to="/get-started"
-            className="mt-4 inline-flex h-14 items-center justify-center rounded-full bg-[#1a1d24] text-[15px] font-medium text-white"
+          <a
+            href="#register"
+            className="mt-3 inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[#1a1d24] text-[14px] font-medium text-white md:mt-4 md:h-14 md:text-[15px]"
             onClick={(event) => event.stopPropagation()}
           >
-            {agent.cta}
-          </Link>
+            Ro‘yxatdan o‘tish
+          </a>
         </div>
       </div>
     </article>

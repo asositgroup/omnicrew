@@ -43,8 +43,8 @@ export function Auth({ mode }: { mode: Mode }) {
       </h1>
       <p className="mt-2 text-muted">
         {mode === "up"
-          ? "Ish joyini oching va birinchi agentni oling."
-          : "Ekipajingizga qaytdingiz."}
+          ? "Biznes kabinetni oching va birinchi AI agentni ishga tushiring."
+          : "AI agentlaringiz boshqaruviga qaytdingiz."}
       </p>
       <form onSubmit={onSubmit} className="mt-8 grid gap-4" noValidate>
         <label className="grid gap-2 text-sm">
@@ -86,7 +86,7 @@ export function Auth({ mode }: { mode: Mode }) {
       <p className="mt-6 text-sm text-muted">
         {mode === "up" ? (
           <>
-            Ish joyingiz bormi?{" "}
+            Hisobingiz bormi?{" "}
             <Link to="/sign-in" className="text-cobalt">
               Kirish
             </Link>

@@ -16,6 +16,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -38,6 +39,27 @@ input,
 textarea,
 select {
   font-family: inherit;
+}
+
+.btn-3d {
+  box-shadow:
+    0 5px 0 var(--color-cobalt-deep),
+    0 12px 24px rgba(29, 111, 255, 0.3);
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    background-color 0.15s ease;
+}
+
+.btn-3d:hover {
+  background-color: #2a78ff;
+}
+
+.btn-3d:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 1px 0 var(--color-cobalt-deep),
+    0 4px 10px rgba(29, 111, 255, 0.25);
 }
 
 .flip-scene {

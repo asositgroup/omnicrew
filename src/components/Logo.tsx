@@ -30,15 +30,12 @@ export function Logo({ className = "" }: { className?: string }) {
     <Link
       to="/"
       className={`inline-flex items-end gap-0 text-ink ${className}`}
-      aria-label="OmniCrew"
+      aria-label="AsosAI"
     >
       <span className="text-[1.4rem] font-extrabold leading-none tracking-[-0.04em]">
-        Omn
+        AsosA
       </span>
-      <RobotI className="-mx-0.5 mb-0 h-[1.7rem] w-[0.95rem]" />
-      <span className="text-[1.4rem] font-extrabold leading-none tracking-[-0.04em]">
-        Crew
-      </span>
+      <RobotI className="-ml-0.5 mb-0 h-[1.7rem] w-[0.95rem]" />
     </Link>
   );
 }

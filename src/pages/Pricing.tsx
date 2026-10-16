@@ -6,14 +6,14 @@ const plans = [
     name: "Starter",
     price: "$29",
     note: "agent / oy",
-    points: ["1 ta workspace", "2 ta umumiy agent", "Asosiy skill paketlar", "Email yordam"],
+    points: ["1 ta biznes kabinet", "2 ta AI agent", "Asosiy skill paketlar", "Email yordam"],
   },
   {
-    name: "Team",
+    name: "Business",
     price: "$79",
     note: "agent / oy",
     points: [
-      "Cheksiz jamoa a'zolari",
+      "Cheksiz biznes jarayonlar",
       "Umumiy skill kutubxonasi",
       "Admin boshqaruvi",
       "Seyf tasdiqlari",
@@ -25,7 +25,7 @@ const plans = [
     name: "Company",
     price: "Biz bilan gaplashing",
     note: "maxsus hajm",
-    points: ["SSO va SCIM", "Alohida izolyatsiya", "Xavfsizlik ko‘rigi", "Maxsus skill paketlar"],
+    points: ["SSO va SCIM", "Alohida izolyatsiya", "Xavfsizlik ko‘rigi", "Biznesga mos maxsus skillar"],
   },
 ];
 
@@ -34,7 +34,7 @@ export function Pricing() {
     <main className="mx-auto max-w-[1180px] px-5 py-16">
       <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">Narxlar</h1>
       <p className="mt-4 max-w-[48ch] text-lg text-muted">
-        Kredit bilan boshlang. Ekipaj o‘ssa, agent qo‘shasiz. Istalgan vaqt bekor qilasiz.
+        Kredit bilan boshlang. Biznes o‘ssa, yangi AI agent qo‘shasiz. Istalgan vaqt bekor qilasiz.
       </p>
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
         {plans.map((plan) => (

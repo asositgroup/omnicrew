@@ -28,11 +28,11 @@ export function BookDemo() {
       <div>
         <h1 className="text-4xl font-semibold tracking-tight">Demo band qilish</h1>
         <p className="mt-4 text-lg leading-relaxed text-muted">
-          20 daqiqada jonli ekipaj pochta, qidiruv va Slackni qanday yuritishini ko‘ring.
+          20 daqiqada AI agentlar sotuv, moliya, pochta va biznes tizimlaringizni qanday yuritishini jonli ko‘ring.
         </p>
         <img
           src="/images/agent-setup.jpg"
-          alt="OmniCrew robot agenti"
+          alt="AsosAI robot agenti"
           className="mt-8 w-full max-w-sm rounded-[28px]"
         />
       </div>
