@@ -20,7 +20,7 @@ export function Nav() {
         </nav>
         <a
           href="#register"
-          className="inline-flex h-9 items-center rounded-full bg-cobalt px-4 text-[13px] md:h-11 md:px-5 font-medium text-white btn-3d md:text-[15px]"
+          className="inline-flex h-9 items-center rounded-full bg-cobalt px-4 text-base md:h-11 md:px-6 font-semibold text-white md:text-lg"
         >
           Bepul audit
         </a>

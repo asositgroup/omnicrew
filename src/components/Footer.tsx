@@ -22,7 +22,7 @@ export function Footer() {
           </a>
           <a
             href="#register"
-            className="btn-3d inline-flex h-10 items-center rounded-full bg-cobalt px-5 font-medium text-white"
+            className="btn-3d inline-flex h-12 items-center rounded-full bg-cobalt px-6 text-lg font-semibold text-white"
           >
             Ro‘yxatdan o‘tish
           </a>

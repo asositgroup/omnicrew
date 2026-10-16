@@ -71,7 +71,7 @@ export function Home() {
 
     if (!name || !contact) {
       setFormStatus("error");
-      setFormMessage("Iltimos, ismingiz va telefon yoki emailingizni kiriting.");
+      setFormMessage("Iltimos, ismingiz va telefon raqamingizni kiriting.");
       return;
     }
 
@@ -136,7 +136,7 @@ export function Home() {
             <div className="mt-5">
               <a
                 href="#register"
-                className="btn-3d flex h-12 w-full items-center justify-center rounded-full bg-cobalt px-6 text-[15px] font-medium text-white"
+                className="btn-3d flex h-14 w-full items-center justify-center rounded-full bg-cobalt px-6 text-xl font-semibold text-white"
               >
                 Agentlarni ishga tushirish
               </a>
@@ -472,15 +472,18 @@ export function Home() {
               <input
                 name="name"
                 placeholder="Masalan: Sardor Aliyev"
-                className="h-11 rounded-xl border border-line bg-white px-3.5 text-sm outline-none ring-cobalt/30 focus:ring-4"
+                className="h-12 rounded-xl border border-line bg-white px-3.5 text-[18px] outline-none ring-cobalt/30 focus:ring-4"
               />
             </label>
             <label className="grid gap-2 text-sm font-medium text-ink">
-              Telefon raqam yoki Email
+              Telefon raqam
               <input
                 name="contact"
-                placeholder="+998 90 123 45 67 yoki email@biznes.uz"
-                className="h-11 rounded-xl border border-line bg-white px-3.5 text-sm outline-none ring-cobalt/30 focus:ring-4"
+                type="tel"
+                inputMode="tel"
+                autoComplete="tel"
+                placeholder="+998 90 123 45 67"
+                className="h-12 rounded-xl border border-line bg-white px-3.5 text-[18px] outline-none ring-cobalt/30 focus:ring-4"
               />
             </label>
             <label className="grid gap-2 text-sm font-medium text-ink">
@@ -488,7 +491,7 @@ export function Home() {
               <input
                 name="company"
                 placeholder="Kompaniya nomi"
-                className="h-11 rounded-xl border border-line bg-white px-3.5 text-sm outline-none ring-cobalt/30 focus:ring-4"
+                className="h-12 rounded-xl border border-line bg-white px-3.5 text-[18px] outline-none ring-cobalt/30 focus:ring-4"
               />
             </label>
             <label className="grid gap-2 text-sm font-medium text-ink">
@@ -496,7 +499,7 @@ export function Home() {
               <select
                 name="employees"
                 defaultValue=""
-                className="h-11 rounded-xl border border-line bg-white px-3 text-sm outline-none ring-cobalt/30 invalid:text-muted focus:ring-4"
+                className="h-12 rounded-xl border border-line bg-white px-3 text-[18px] outline-none ring-cobalt/30 invalid:text-muted focus:ring-4"
                 required
               >
                 <option value="" disabled>
@@ -522,7 +525,7 @@ export function Home() {
             <button
               type="submit"
               disabled={formStatus === "loading" || formStatus === "ok"}
-              className="btn-3d mt-2 h-12 rounded-full bg-cobalt text-[15px] font-medium text-white disabled:opacity-60"
+              className="btn-3d mt-2 h-14 rounded-full bg-cobalt text-xl font-semibold text-white disabled:opacity-60"
             >
               {formStatus === "loading"
                 ? "Yuborilmoqda..."
