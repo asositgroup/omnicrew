@@ -11,7 +11,7 @@ import { Reveal } from "../components/Reveal";
 import { AgentCarousel } from "../components/AgentCarousel";
 import { Logo } from "../components/Logo";
 import { PhoneInput } from "../components/PhoneInput";
-import { apps, chats, faqs, scenarios } from "../data";
+import { faqs, scenarios } from "../data";
 
 
 function Media({
@@ -195,47 +195,6 @@ export function Home() {
         <AgentCarousel />
       </section>
 
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-[1180px] px-5">
-          <Reveal>
-            <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-              Biznesingiz tizimlarida ishlaydi
-            </h2>
-            <p className="mt-4 max-w-[48ch] text-lg leading-relaxed text-muted">
-              Har bir agentning o‘z virtual kompyuteri bor. CRM, pochta, Slack, Teams va 3 000+ biznes dasturlar bilan ishlaydi.
-            </p>
-          </Reveal>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            {apps.map((app) => (
-              <img
-                key={app.name}
-                src={app.src}
-                alt={app.name}
-                className="h-8 w-8 object-contain"
-                title={app.name}
-              />
-            ))}
-            <span className="text-sm text-muted">3,000+</span>
-          </div>
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
-            {chats.map((chat) => (
-              <article key={chat.channel} className="rounded-[28px] border border-line bg-fog p-5">
-                <p className="text-sm font-medium">{chat.title}</p>
-                <p className="text-xs text-muted">{chat.channel}</p>
-                <div className="mt-4 grid gap-3">
-                  {chat.messages.map((msg) => (
-                    <div key={msg.body} className="rounded-2xl bg-white p-3">
-                      <p className="text-xs font-medium text-cobalt">{msg.who}</p>
-                      <p className="mt-1 text-sm leading-relaxed text-ink">{msg.body}</p>
-                    </div>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="px-4 py-16">
         <div className="relative mx-auto max-w-[1180px] overflow-hidden rounded-[32px] bg-[#152033]">
           <img
@@ -358,7 +317,7 @@ export function Home() {
             Tanish <span className="text-cobalt">muammolar</span>
           </h2>
           <p className="mx-auto mt-4 max-w-[46ch] text-lg text-muted">
-            Biznes egalari har kuni duch keladigan 14 ta vaziyat va AI yordamchi ularni qanday yengillashtiradi.
+            Biznes egalari har kuni duch keladigan 5 ta vaziyat va AI yordamchi ularni qanday yengillashtiradi.
           </p>
         </Reveal>
         <div className="mx-auto mt-12 grid max-w-[1180px] items-start gap-5 md:grid-cols-2">
