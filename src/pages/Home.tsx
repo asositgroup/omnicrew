@@ -104,7 +104,7 @@ export function Home() {
         <div className="mx-auto mt-5 w-full max-w-[330px] overflow-hidden rounded-t-full bg-gradient-to-b from-[#cfe2ff] via-[#7eb6ff] to-[#1d6fff] pt-4 md:mt-10 md:max-w-[420px] md:pt-10 lg:col-start-2 lg:row-span-5 lg:row-start-1 lg:mt-0 lg:self-center">
           <img
             src="/images/founder.png"
-            alt="AsosAI asoschisi"
+            alt="Asoschilar Consulting asoschisi"
             width={640}
             height={567}
             className="block w-full"
@@ -122,7 +122,7 @@ export function Home() {
         <div className="mx-auto max-w-[1240px] md:relative md:overflow-hidden md:rounded-[28px]">
           <img
             src="/images/hero-crew.jpg"
-            alt="AsosAI AI agentlari biznes jarayonlarini boshqarmoqda"
+            alt="Asoschilar Consulting AI agentlari biznes jarayonlarini boshqarmoqda"
             className="aspect-[16/9] w-full rounded-[28px] object-cover object-center md:rounded-none"
           />
           <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-tr from-ink/20 via-transparent to-transparent md:block" />
@@ -178,7 +178,7 @@ export function Home() {
         </Reveal>
         <img
           src="/images/crew-banner.png?v=2"
-          alt="To'rtta AsosAI AI agenti biznes vazifalarni bajarmoqda"
+          alt="To'rtta Asoschilar Consulting AI agenti biznes vazifalarni bajarmoqda"
           width={1168}
           height={266}
           className="mx-auto mt-8 block h-auto w-full max-w-[1168px] px-4"
@@ -275,7 +275,7 @@ export function Home() {
           <Media
             src="/video/security-key.mp4"
             poster="/images/security-key.jpg"
-            alt="Odam kalitni AsosAI agentiga topshirayapti"
+            alt="Odam kalitni Asoschilar Consulting agentiga topshirayapti"
             className="w-full rounded-[28px]"
           />
         </Reveal>
@@ -418,7 +418,7 @@ export function Home() {
             </p>
             <img
               src="/images/agent-setup.jpg"
-              alt="AsosAI biznes AI agenti"
+              alt="Asoschilar Consulting biznes AI agenti"
               className="mt-8 w-full max-w-sm rounded-[28px]"
             />
           </div>

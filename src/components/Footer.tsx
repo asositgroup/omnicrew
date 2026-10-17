@@ -30,7 +30,7 @@ export function Footer() {
       </div>
       <div className="border-t border-line/70">
         <p className="mx-auto max-w-[1180px] px-5 py-5 text-xs text-muted">
-          © {new Date().getFullYear()} AsosAI. Barcha huquqlar himoyalangan.
+          © {new Date().getFullYear()} Asoschilar Consulting. Barcha huquqlar himoyalangan.
         </p>
       </div>
     </footer>

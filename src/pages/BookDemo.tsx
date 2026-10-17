@@ -32,7 +32,7 @@ export function BookDemo() {
         </p>
         <img
           src="/images/agent-setup.jpg"
-          alt="AsosAI robot agenti"
+          alt="Asoschilar Consulting robot agenti"
           className="mt-8 w-full max-w-sm rounded-[28px]"
         />
       </div>

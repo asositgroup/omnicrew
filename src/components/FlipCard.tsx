@@ -51,7 +51,7 @@ export function FlipCard({ agent }: { agent: Agent }) {
           <div className="relative min-h-0 flex-1">
             <img
               src={`${agent.image}?v=12`}
-              alt={`${agent.name} AsosAI agenti`}
+              alt={`${agent.name} Asoschilar Consulting agenti`}
               className={`absolute inset-x-0 bottom-0 ${
                 agent.image.endsWith(".png")
                   ? "left-1/2 h-[102%] w-auto max-w-[88%] -translate-x-1/2 object-contain object-bottom md:h-[115%]"

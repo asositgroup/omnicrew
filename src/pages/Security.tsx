@@ -30,7 +30,7 @@ export function Security() {
         <div className="mx-auto max-w-[1240px] md:relative md:overflow-hidden md:rounded-[28px]">
           <img
             src="/images/security-key.jpg"
-            alt="Odam kalitni AsosAI agentiga topshirayapti"
+            alt="Odam kalitni Asoschilar Consulting agentiga topshirayapti"
             className="aspect-[16/9] w-full rounded-[28px] object-cover object-center md:rounded-none"
           />
           <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-tr from-ink/20 via-transparent to-transparent md:block" />
@@ -39,7 +39,7 @@ export function Security() {
               Biznesingizda AI agentlarni xavfsiz ishlatish uchun qurilgan
             </h1>
             <p className="mt-3 max-w-[40ch] text-sm leading-relaxed text-muted md:text-base">
-              Oddiy AI vositalarning o‘zi yetarli emas. AsosAI biznesga kerak bo‘lgan izolyatsiya, seyf va admin qatlamini qo‘shadi.
+              Oddiy AI vositalarning o‘zi yetarli emas. Asoschilar Consulting biznesga kerak bo‘lgan izolyatsiya, seyf va admin qatlamini qo‘shadi.
             </p>
           </div>
         </div>
