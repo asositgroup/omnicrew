@@ -58,17 +58,21 @@ function Media({
   );
 }
 
+const LEAD_SHEET_URL =
+  "https://script.google.com/macros/s/AKfycbyw51K_Z36_fX0XzOz8DeXkOuJmswj3ZjR_txZ_c5HceCzFl4EGAVPTPMOYYYyZAAJj/exec";
+
 export function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [formStatus, setFormStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
   const [formMessage, setFormMessage] = useState("");
 
-  function onRegisterSubmit(event: FormEvent<HTMLFormElement>) {
+  async function onRegisterSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const name = String(data.get("name") || "").trim();
     const contact = String(data.get("contact") || "").trim();
     const company = String(data.get("company") || "").trim();
+    const employees = String(data.get("employees") || "");
 
     if (!name || !contact) {
       setFormStatus("error");
@@ -82,14 +86,34 @@ export function Home() {
 
     setFormStatus("loading");
     setFormMessage("");
-    window.setTimeout(() => {
-      setFormStatus("ok");
-      setFormMessage(
-        company
-          ? `${company} uchun ro‘yxatdan o‘tish so‘rovi qabul qilindi! Tez orada bog‘lanamiz.`
-          : "Ro‘yxatdan o‘tish so‘rovi qabul qilindi! Tez orada siz bilan bog‘lanamiz.",
-      );
-    }, 600);
+
+    // "2025-08-29 - 03:41:02" ko‘rinishida, Toshkent vaqti bilan
+    const sentAt = new Date()
+      .toLocaleString("sv-SE", { timeZone: "Asia/Tashkent" })
+      .replace(" ", " - ");
+    const lead = new FormData();
+    lead.append("sheetName", "Lead");
+    lead.append("Ism", name);
+    lead.append("Telefon raqam", contact.replace(/\D/g, ""));
+    lead.append("Kompaniya", company);
+    lead.append("Hodimlar", employees);
+    lead.append("Royhatdan o'tgan vaqti", sentAt);
+
+    try {
+      // Apps Script CORS javobini bermaydi, shuning uchun no-cors: tarmoq xatosi bo‘lmasa yetib boradi
+      await fetch(LEAD_SHEET_URL, { method: "POST", body: lead, mode: "no-cors" });
+    } catch {
+      setFormStatus("error");
+      setFormMessage("Yuborib bo‘lmadi. Internetni tekshirib, qayta urinib ko‘ring.");
+      return;
+    }
+
+    setFormStatus("ok");
+    setFormMessage(
+      company
+        ? `${company} uchun ro‘yxatdan o‘tish so‘rovi qabul qilindi! Tez orada bog‘lanamiz.`
+        : "Ro‘yxatdan o‘tish so‘rovi qabul qilindi! Tez orada siz bilan bog‘lanamiz.",
+    );
   }
 
   return (
